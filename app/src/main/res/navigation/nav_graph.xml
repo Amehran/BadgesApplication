@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/AchievementsFragment">
+
+    <fragment
+        android:id="@+id/AchievementsFragment"
+        android:name="com.example.achievements.ui.achievements.AchievementsFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_achievements">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/DetailedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/DetailedFragment"
+        android:name="com.example.achievements.ui.detailed.DetailedFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_detailed">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/AchievementsFragment" />
+    </fragment>
+</navigation>
